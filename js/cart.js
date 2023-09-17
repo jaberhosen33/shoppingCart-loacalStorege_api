@@ -3,6 +3,7 @@ const Getproduct=()=>{
  const quantity=document.getElementById('quantity').value;
 
 displayproduct(product,quantity);
+
 }
 const displayproduct=(product,quantity)=>{
  const container=document.getElementById('container');
@@ -11,3 +12,34 @@ const displayproduct=(product,quantity)=>{
  container.appendChild(ul);
 
 }
+
+const storedCart=()=>{
+ let cart={};
+ const StoreCartData=localStorage.getItem('cart');
+ if(StoreCartData){
+    cart=JSON.parse(StoreCartData);
+ }
+ return cart;
+}
+storedCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
