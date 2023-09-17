@@ -1,3 +1,4 @@
+// addItem button to get input data and set  
 const Getproduct=()=>{
  const product=document.getElementById('product').value;
  const quantity=document.getElementById('quantity').value;
@@ -5,6 +6,7 @@ const Getproduct=()=>{
 displayproduct(product,quantity);
 
 }
+// display input field data on ul-li
 const displayproduct=(product,quantity)=>{
  const container=document.getElementById('container');
  const ul=document.createElement('ul');
@@ -12,10 +14,13 @@ const displayproduct=(product,quantity)=>{
  container.appendChild(ul);
 
 }
-
+// set data in localStorage
 const storedCart=()=>{
- let cart={};
+//  init empty object
+  let cart={};
+//   get cart object on localStorage
  const StoreCartData=localStorage.getItem('cart');
+//  check data is empty or set data Jeson formet
  if(StoreCartData){
     cart=JSON.parse(StoreCartData);
  }
